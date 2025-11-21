@@ -15,3 +15,12 @@ These past two weeks, I've learned about setting up operating systems on my wind
 - Then, I made a copy of Mr. Mortensen's repository, Student, where I got a version to edit and add personalized information to. 
 - I then worked on the about.md file within the navigation folder, where I added my own images and text
 - Furthermore, I also learned how to access professional coding tools through a terminal, where we type in commands. I downloaded WSL, and Ubuntu, which are a part of Linux, and it is like a separate computer within my computer. 
+
+graph TD
+    A[Started Computer Science Class] --> B[Created GitHub Account]
+    B --> C[Joined Slack Workspace]
+    C --> D[Joined OpenCoding Society]
+    D --> E[Installed WSL]
+    E --> F[Downloaded & Set Up Ubuntu]
+    F --> G[Completed Initial Commands / Setup Tasks]
+    G --> H[Ready for Development Work]
