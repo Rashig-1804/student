@@ -61,7 +61,7 @@ Flags are made using Wikipedia images
     var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
     var living_in_the_world = [
         {"flag": "0/01/Flag_of_California.svg", "greeting": "Hey", "description": "California - forever"},
-        {"flag": "0/01/Flag_of_India.svg", "greeting": "Hey", "description": "India - As a baby"},
+        {"flag": "0/01/Flag_of_India.svg", "greeting": "Namaste", "description": "India - As a baby"},
     ];
 
     // 3a. Consider how to update style count for size of container
@@ -108,11 +108,11 @@ Here is what I did at those places
 
 ### Culture, Family, and Fun
 
-Everything for me, as for many others, revolves around family and faith.
-
-- My mother told me that I was Danish, English. and Irish, here is my researched [family tree]({{site.baseurl}}/images/about/familytree.png)
-- My family is pretty big as I have been married twice, my 1st wife passed away.  We have had 5 kids, 4 adopted by me, 1 biological.  Plus, there are three grandkids.  My name to my grandkids is Abuilito.
+Everything for me, as for many others, revolves around family and culture!
 - The gallery of pics has some of my family, fun, and cultural memories!
+- There is my mom, dad, and my elder sister, Ananya! 
+- I love dancing
+- Below are some pics from our fun New York Trip!
 
 <comment>
 Gallery of Pics, scroll to the right for more ...
