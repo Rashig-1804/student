@@ -16,21 +16,22 @@ These past two weeks, I've learned about setting up operating systems on my wind
 - I then worked on the about.md file within the navigation folder, where I added my own images and text
 - Furthermore, I also learned how to access professional coding tools through a terminal, where we type in commands. I downloaded WSL, and Ubuntu, which are a part of Linux, and it is like a separate computer within my computer. 
 
+```mermaid
 graph TD
-    A([fa:fa-laptop-code Started my CS Tool Journey]) --> B([fa:fa-github Created GitHub Account])
-    B --> B2([fa:fa-code-branch Learned GitHub tracks and stores my code])
+    A([Started my CS Tool Journey]) --> B([Created GitHub Account])
+    B --> B2([Learned GitHub tracks and stores my code])
     
-    B2 --> C([fa:fa-slack Joined CSSE Slack])
-    C --> C2([fa:fa-comments Slack helps with group communication])
+    B2 --> C([Joined CSSE Slack])
+    C --> C2([Slack helps with group communication])
 
-    C2 --> D([fa:fa-users Joined OpenCoding Society])
+    C2 --> D([Joined OpenCoding Society])
 
-    D --> E([fa:fa-copy Forked Mr. Mortensen's "Student" Repository])
-    E --> F([fa:fa-file-alt Edited about.md with my own text and images])
+    D --> E([Forked Mr. Mortensen's "Student" Repository])
+    E --> F([Edited about.md with my own text and images])
 
-    F --> G([fa:fa-terminal Downloaded WSL])
-    G --> H([fa:fa-linux Installed Ubuntu on WSL])
-    H --> I([fa:fa-keyboard Used terminal commands + professional tools])
+    F --> G([Downloaded WSL])
+    G --> H([Installed Ubuntu on WSL])
+    H --> I([Used terminal commands + professional tools])
 
-    I --> J([fa:fa-rocket Feeling ready for real development!])
-
+    I --> J([Feeling ready for real development!])
+```
