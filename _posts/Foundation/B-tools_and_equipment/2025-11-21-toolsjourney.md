@@ -16,7 +16,7 @@ These past two weeks, I've learned about setting up operating systems on my wind
 - I then worked on the about.md file within the navigation folder, where I added my own images and text
 - Furthermore, I also learned how to access professional coding tools through a terminal, where we type in commands. I downloaded WSL, and Ubuntu, which are a part of Linux, and it is like a separate computer within my computer. 
 
-! [My Github Analytics from day 1]({{site.baseurl}}/images/progress.png)
+![My Github Analytics from day 1]({{site.baseurl}}/images/progress.png)
 
 ```mermaid
 flowchart TD
