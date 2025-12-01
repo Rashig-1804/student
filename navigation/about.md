@@ -112,7 +112,7 @@ Everything for me, as for many others, revolves around family and culture!
 - The gallery of pics has some of my family, fun, and cultural memories!
 - There is my mom, dad, and my elder sister, Ananya! 
 - I love dancing
-- Below are some pics from our fun New York Trip!
+- Below are some pics from our fun New York Trip, my dance performance, Diwali, and my middle school promotion!
 
 <comment>
 Gallery of Pics, scroll to the right for more ...

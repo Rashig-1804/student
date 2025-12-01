@@ -16,22 +16,43 @@ These past two weeks, I've learned about setting up operating systems on my wind
 - I then worked on the about.md file within the navigation folder, where I added my own images and text
 - Furthermore, I also learned how to access professional coding tools through a terminal, where we type in commands. I downloaded WSL, and Ubuntu, which are a part of Linux, and it is like a separate computer within my computer. 
 
+
 ```mermaid
-graph TD
-    A([Started my CS Tool Journey]) --> B([Created GitHub Account])
-    B --> B2([Learned GitHub tracks and stores my code])
-    
-    B2 --> C([Joined CSSE Slack])
-    C --> C2([Slack helps with group communication])
+flowchart TD
+    %% GitHub Sources
+    subgraph GitHub_Pages[GitHub: Open-Coding-Society/pages]
+        A[Repo: pages]:::repo
+    end
 
-    C2 --> D([Joined OpenCoding Society])
+    subgraph GitHub_Template[GitHub: Open-Coding-Society/student]
+        T[Template Repo: student]:::repo
+    end
 
-    D --> E([Forked Mr. Mortensen's "Student" Repository])
-    E --> F([Edited about.md with my own text and images])
+    subgraph GitHub_Student[GitHub: jm1021/student]
+        B[Repo: student]:::repo
+    end
 
-    F --> G([Downloaded WSL])
-    G --> H([Installed Ubuntu on WSL])
-    H --> I([Used terminal commands + professional tools])
+    %% Local Computer
+    subgraph Local[Local Computer]
+        subgraph opencs_dir[opencs/ directory]
+            C[pages/]:::local
+            Ccmd[VSCode Prep<br/><br/>./scripts/venv.sh<br/>source venv/bin/activate<br/>code .]:::cmd
+        end
+        subgraph user_dir[jm1021/ directory]
+            D[student/]:::local
+            Dcmd[VSCode Prep<br/><br/>./scripts/venv.sh<br/>source venv/bin/activate<br/>code .]:::cmd
+        end
+    end
 
-    I --> J([Feeling ready for real development!])
+    %% Arrows: cloning
+    A -.->|clone/pull only| C
+    B <--> |clone, pull & push| D
+
+    %% Arrows: template relationship
+    T -.->|template→created| B
+
+    %% Arrows: commands
+    C --> Ccmd
+    D <--> Dcmd
+
 ```
