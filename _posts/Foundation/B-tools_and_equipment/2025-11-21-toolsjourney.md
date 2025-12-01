@@ -28,7 +28,7 @@ flowchart TD
         T[Template Repo: student]:::repo
     end
 
-    subgraph GitHub_Student[GitHub: jm1021/student]
+    subgraph GitHub_Student[GitHub: Rashig-1804/student]
         B[Repo: student]:::repo
     end
 
@@ -38,7 +38,7 @@ flowchart TD
             C[pages/]:::local
             Ccmd[VSCode Prep<br/><br/>./scripts/venv.sh<br/>source venv/bin/activate<br/>code .]:::cmd
         end
-        subgraph user_dir[jm1021/ directory]
+        subgraph user_dir[Rashig-1804/ directory]
             D[student/]:::local
             Dcmd[VSCode Prep<br/><br/>./scripts/venv.sh<br/>source venv/bin/activate<br/>code .]:::cmd
         end
