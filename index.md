@@ -7,8 +7,7 @@ show_reading_time: false
 
 ### Rashi Gaurav
 
-Hi! My name is Rashi Gaurav
-I am very eager to learn more about computer science, and how we can work with software platforms to program games or even a website!
+Hi! My name is Rashi Gaurav. I am very eager to learn more about computer science, and how we can work with software platforms to program games or even a website!
 
 ### Development Environment
 
