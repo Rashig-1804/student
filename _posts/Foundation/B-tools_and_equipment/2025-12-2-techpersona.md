@@ -7,4 +7,4 @@ author: Rashi Gaurav
 permalink: /persona
 ---
 ## Rashi's Persona
-As a computer science and software learner, I am a mix of planner and technologist personalities! 
+As a computer science and software learner, I am a mix of planner and technologist personalities
