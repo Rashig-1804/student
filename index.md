@@ -45,6 +45,13 @@ Hi! My name is Rashi Gaurav. I am very eager to learn more about computer scienc
             Turtle
         </div>
     </a>
+    <a href="{{site.baseurl}}/memory" style="text-decoration: none;">
+        <div style="background-color: #1fc299ff; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+            Memory
+        </div>
+    </a>
+
+    
 </div>
 
 <br>
