@@ -1,7 +1,7 @@
 ---
 layout: opencs
 title: Memory Game
-permalink: /javascript/project/memory
+permalink: /memory
 ---
 
 <style>
@@ -246,6 +246,6 @@ permalink: /javascript/project/memory
         }
     });
 
-    // Draw all emojis at the start (for initial reveal)
+    // Draw all emojis t the start (for initial reveal)
     drawEmojis(4, 4, emojiList);
-</script>
+</script>a
