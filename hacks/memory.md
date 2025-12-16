@@ -248,4 +248,4 @@ permalink: /memory
 
     // Draw all emojis t the start (for initial reveal)
     drawEmojis(4, 4, emojiList);
-</script>a
+</script>
