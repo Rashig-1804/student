@@ -16,14 +16,28 @@ permalink: /memory
         text-align: center;
         margin-top: 20px;
     }
-    /* Added style for better highscore visibility */
-    .highscore-display {
-        font-weight: bold;
-        color: #007acc; 
-    }
+    /* Added style for better highscore visibility */
+    .highscore-display {
+        font-weight: bold;
+        color: #007acc; 
+    }
+    /* Style for controls */
+    .controls {
+        text-align: center;
+        margin-bottom: 20px;
+        font-family: sans-serif; /* Use a common font for controls */
+    }
+    .controls label {
+        font-weight: bold;
+        margin-right: 10px;
+    }
 </style>
 
 <h2>Memory Game</h2>
+<div class="controls">
+    <label for="squareColorPicker">Pick Your Square Color:</label>
+    <input type="color" id="squareColorPicker" value="#CCCCCC">
+</div>
 <p>Score: <span class="score"></span></p>
 <p>Attempts: <span class="attempts"></span></p>
 <p>High Score (Least Attempts): <span class="highscore-display" id="highScoreDisplay"></span></p>
@@ -36,6 +50,11 @@ permalink: /memory
     // Get canvas and context for drawing
     const memCanvas = document.getElementById('memoryCanvas');
     const memCtx = memCanvas.getContext('2d');
+    
+    // --- NEW COLOR PICKER ELEMENTS AND VARIABLE ---
+    const colorPicker = document.getElementById('squareColorPicker');
+    // Initialize the cover color with the default value from the input
+    let coverColor = colorPicker.value; 
 
     // Game state variables
     let clicks = 0; // Tracks number of clicks in current turn
@@ -43,47 +62,47 @@ permalink: /memory
     let matchedCells = []; // Stores matched cells [{col, row}]
     const scoreDisplay = document.querySelector('.score');
     const attemptsDisplay = document.querySelector('.attempts');
-    const highScoreDisplay = document.getElementById('highScoreDisplay'); // New element
+    const highScoreDisplay = document.getElementById('highScoreDisplay'); // New element
 
     let score = 0; // Player's score
     let attempts = 0; // Number of attempts made
     scoreDisplay.textContent = score;
     attemptsDisplay.textContent = attempts;
-    
-    // --- HIGH SCORE IMPLEMENTATION START ---
-    
-    // 1. Get saved high score or set a default very high number (Infinity) if none exists
-    const localStorageKey = 'memoryGameHighScore';
-    let highScore = localStorage.getItem(localStorageKey);
+    
+    // --- HIGH SCORE IMPLEMENTATION START ---
+    
+    // 1. Get saved high score or set a default very high number (Infinity) if none exists
+    const localStorageKey = 'memoryGameHighScore';
+    let highScore = localStorage.getItem(localStorageKey);
 
-    // Convert the stored string value to a number. If null (first time), set to 'No Score Yet'
-    if (highScore === null) {
-        highScore = Infinity; 
-        highScoreDisplay.textContent = "N/A";
-    } else {
-        highScore = parseInt(highScore, 10);
-        highScoreDisplay.textContent = highScore;
-    }
+    // Convert the stored string value to a number. If null (first time), set to 'No Score Yet'
+    if (highScore === null) {
+        highScore = Infinity; 
+        highScoreDisplay.textContent = "N/A";
+    } else {
+        highScore = parseInt(highScore, 10);
+        highScoreDisplay.textContent = highScore;
+    }
 
-    // Function to check and save a new high score
-    function checkAndSaveHighScore(currentAttempts) {
-        // Only update if the current score (fewer attempts) is better than the saved high score
-        if (currentAttempts < highScore) {
-            highScore = currentAttempts; // Update the variable
-            
-            // Save the new best score to the browser's local storage
-            localStorage.setItem(localStorageKey, highScore);
-            
-            // Update the display on the page
-            highScoreDisplay.textContent = highScore;
-            
-            alert(`New High Score! You completed the game in ${currentAttempts} attempts!`);
-        } else {
-            alert(`Congratulations! You completed the game in ${currentAttempts} attempts.`);
-        }
-    }
-    
-    // --- HIGH SCORE IMPLEMENTATION END ---
+    // Function to check and save a new high score
+    function checkAndSaveHighScore(currentAttempts) {
+        // Only update if the current score (fewer attempts) is better than the saved high score
+        if (currentAttempts < highScore) {
+            highScore = currentAttempts; // Update the variable
+            
+            // Save the new best score to the browser's local storage
+            localStorage.setItem(localStorageKey, highScore);
+            
+            // Update the display on the page
+            highScoreDisplay.textContent = highScore;
+            
+            alert(`New High Score! You completed the game in ${currentAttempts} attempts!`);
+        } else {
+            alert(`Congratulations! You completed the game in ${currentAttempts} attempts.`);
+        }
+    }
+    
+    // --- HIGH SCORE IMPLEMENTATION END ---
 
     // Draws the grid lines on the canvas
     function drawGrid(cols, rows) {
@@ -150,7 +169,7 @@ permalink: /memory
     }
     shuffle(emojiList);
 
-    // Covers all cells except matched ones with a gray rectangle
+    // Covers all cells except matched ones with the selected color
     function hideEmojis(cols, rows) {
         const cellWidth = memCanvas.width / cols;
         const cellHeight = memCanvas.height / rows;
@@ -159,12 +178,37 @@ permalink: /memory
             for (let col = 0; col < cols; col++) {
                 // Only hide if not matched
                 if (!matchedCells.some(cell => cell.col === col && cell.row === row)) {
-                    memCtx.fillStyle = '#CCCCCC';
+                    // --- CHANGED: Use the dynamic coverColor variable ---
+                    memCtx.fillStyle = coverColor; 
                     memCtx.fillRect(col * cellWidth + 5, row * cellHeight + 5, cellWidth - 10, cellHeight - 10);
                 }
             }
         }
     }
+
+    // --- NEW: Event listener for the color picker ---
+    colorPicker.addEventListener('input', (event) => {
+        coverColor = event.target.value; // Update the color variable
+        
+        // Re-hide all non-matched/non-revealed cells with the new color immediately
+        // First, redraw the emojis to ensure they are on the canvas (needed for the hide function)
+        memCtx.clearRect(0, 0, memCanvas.width, memCanvas.height); // Clear everything
+        drawGrid(4, 4); // Redraw grid
+        drawEmojis(4, 4, emojiList); // Redraw all emojis
+        
+        // Reveal currently revealed/matched cells
+        [...matchedCells, ...revealedCells].forEach(cell => {
+            // Get the emoji using the original index from the emojiList
+            // Note: For matchedCells, we need to infer the emoji as it wasn't stored directly,
+            // but since hideEmojis handles matched cells, we primarily focus on redrawing the cover.
+            revealEmojiAt(cell.col, cell.row, emojiList);
+        });
+        
+        hideEmojis(4, 4); // Cover the rest with the new color
+    });
+    // --- END New Color Picker Listener ---
+
+
     // Show all emojis for 3 seconds, then hide them
     setTimeout(() => hideEmojis(4, 4), 3000);
 
@@ -238,9 +282,9 @@ permalink: /memory
         }
         // Check for Win Condition and update high score
         if(score == 8) {
-            // New logic: Check and save high score before reloading
-            checkAndSaveHighScore(attempts);
-            
+            // New logic: Check and save high score before reloading
+            checkAndSaveHighScore(attempts);
+            
             // Refresh page to start a new game
             location.reload();
         }
