@@ -9,10 +9,9 @@ permalink: /girls_incs_panel
 
 ## Images
 <div class="panel_pictures">
-  <img src="{{site.baseurl}}/images/notebooks/foundation/cs_panel1.jpeg" alt="image1">
-  <img src="{{site.baseurl}}/images/notebooks/foundation/cs_panel2.jpeg" alt="image2">
-  <img src="{{site.baseurl}}/images/notebooks/foundation/cs_panel3.jpeg" alt="image3">
-  <img src="{{site.baseurl}}/images/notebooks/foundation/sunset.jpeg" alt="image4">
+  <img src="{{site.baseurl}}/images/notebooks/foundation/cs_panel1.jpeg" alt="image1" style="width: 30%;">
+  <img src="{{site.baseurl}}/images/notebooks/foundation/cs_panel2.jpeg" alt="image2" style="width: 30%;">
+  <img src="{{site.baseurl}}/images/notebooks/foundation/cs_panel3.jpeg" alt="image3" style="width: 30%;">
 </div>
 
 ## Description
