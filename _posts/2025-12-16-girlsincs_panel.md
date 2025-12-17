@@ -7,6 +7,9 @@ author: Rashi Gaurav
 permalink: /girls_incs_panel
 ---
 
+## Images
+
+
 ## Description
 On December 16, 2025, I was given the exciting opportunity to attend a Girls in CS Panel, where there were 4 college students, from universities like UCLA, SDSU and UC Berkeley. I was able to learn a lot and find out about the whole high school and college experience as they are majoring in Data Science or computer science, fields I'm interested in!
 
