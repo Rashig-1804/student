@@ -8,17 +8,12 @@ permalink: /girls_incs_panel
 ---
 
 ## Images
-<div class="image-gallery">
+<div class="panel_pictures">
   <img src="{{site.baseurl}}/images/cs_panel1.jpeg" alt="image1">
   <img src="{{site.baseurl}}/images/cs_panel2.jpeg" alt="image2">
   <img src="{{site.baseurl}}/images/cs_panel3.jpeg" alt="image3">
   <img src="{{site.baseurl}}/images/sunset.jpeg" alt="image4">
 </div>
-
-![A photo of me with the college students panel]({{site.baseurl}}/images/cs_panel1.jpeg)
-![Another photo of me with the college students panel]({{site.baseurl}}/images/cs_panel2.jpeg)
-![A photo of the college students panel]({{site.baseurl}}/assets/images/cs_panel3.jpeg)
-![The sunset!]({{site.baseurl}}/images/sunset.jpeg)
 
 ## Description
 On December 16, 2025, I was given the exciting opportunity to attend a Girls in CS Panel, where there were 4 college students, from universities like UCLA, SDSU and UC Berkeley. I was able to learn a lot and find out about the whole high school and college experience as they are majoring in Data Science or computer science, fields I'm interested in!
