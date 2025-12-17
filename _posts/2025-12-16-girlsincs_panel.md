@@ -47,3 +47,11 @@ On December 16, 2025, I was given the exciting opportunity to attend a Girls in 
 - Look closely at what courses are being offered at school and focus on project-based classes
 - Tanisha’s number 1 piece of advice is to utilize resources but also keep in touch with people we hear from, and take advantage of project-based classes such as Mr. Mortensen’s class
 - Anytime we go to network events, it’s important to connect with other people and being able to talk to many amazing, experienced industry people! 
+
+## My Initiative Now
+After listening to many inspiring college students about their experience, I've made some goals
+- I will continue on Mr. Mortensen's CS Pathway in high school so I can get advanced experience in computer science and data science
+- I would like to maximize the rigorous courses I take in high school, so I can prepare myself for a good academic environment
+- I would like to work on more collaboration projects with several other amazing computer science peers, to share our interests and goals together
+- I would like to start a project based on my passion for dance and interest in computer science to be able to code an app or website!
+
