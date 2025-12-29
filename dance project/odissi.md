@@ -10,6 +10,8 @@ Odissi is an ancient Indian classical dance that originated in the state of Odis
 
 
 <div class="image-gallery3">
-  <img src="{{site.baseurl}}/dance project/dancer.png" alt="Image 1">
-    Odissi Dancer (sahapedia.org)
+  <img src="{{site.baseurl}}/dance project/dancer.png">
+    Odissi Dancer (https://sahapedia.org)
+  <img src="{{site.baseurl}}/dance project/dancer_worshopping.png">
+    Odissi Dancer worshopping Lord Jagannath (https://orissadanceacademy.org/)
 </div>
