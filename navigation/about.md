@@ -137,9 +137,9 @@ Gallery of Pics, scroll to the right for more ...
 </div>
 
 
-
 ### Fun Facts
 <div id="grid_container"></div>
+
 
 <script>
 var outputElement = document.getElementById("grid_container");
@@ -147,9 +147,9 @@ var outputElement = document.getElementById("grid_container");
 outputElement.innerHTML = '';
 
 // Data array
-const favorites = [
-  {img: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Shrimp_Fettucini_Alfredo.jpg/960px-Shrimp_Fettucini_Alfredo.jpg?20070104033210", greeting: "Alfredo Pasta", description: "Favorite Food"},
-  {img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/HK_food_Appolo_%E9%9B%AA%E7%B3%95_ice_cream_with_black_cookies_n_white_cream_May_2021_SS2_01.jpg/500px-HK_food_Appolo_%E9%9B%AA%E7%B3%95_ice_cream_with_black_cookies_n_white_cream_May_2021_SS2_01.jpg?20210512160940", greeting: "Cookies and Cream", description: "Favorite Ice Cream Flavor"},
+const living_in_the_world = [
+  {flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/HK_food_Appolo_%E9%9B%AA%E7%B3%95_ice_cream_with_black_cookies_n_white_cream_May_2021_SS2_01.jpg/500px-HK_food_Appolo_%E9%9B%AA%E7%B3%95_ice_cream_with_black_cookies_n_white_cream_May_2021_SS2_01.jpg?20210512160940", greeting: "Favorite Ice Cream", description: "Cookies and Cream"},
+  {flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Shrimp_Fettucini_Alfredo.jpg/640px-Shrimp_Fettucini_Alfredo.jpg", greeting: "Favorite Food", description: "Alfredo Pasta"},
 ];
 
 // Create a div container with id
@@ -166,7 +166,7 @@ container.style.gridTemplateColumns = 'repeat(auto-fill, minmax(150px, 1fr))';
 container.style.gap = '10px';
 
 // Loop through data and create grid items
-for (const location of favorites) {
+for (const location of living_in_the_world) {
   // Create grid item
   const gridItem = document.createElement('div');
   gridItem.style.textAlign = 'center';
@@ -204,4 +204,3 @@ for (const location of favorites) {
 // Add containter to output 
 outputElement.appendChild(container);
 </script>
-
