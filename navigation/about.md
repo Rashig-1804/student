@@ -140,7 +140,6 @@ Gallery of Pics, scroll to the right for more ...
 ### Fun Facts
 <div id="grid_container"></div>
 
-
 <script>
 var outputElement = document.getElementById("grid_container");
 // Clear the output
@@ -152,9 +151,6 @@ const living_in_the_world = [
   {flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Shrimp_Fettucini_Alfredo.jpg/640px-Shrimp_Fettucini_Alfredo.jpg", greeting: "Favorite Food", description: "Alfredo Pasta"},
 ];
 
-// Create a div container with id
-const container = document.createElement('div');
-container.id = 'grid_container';
 
 // Style the container 
 container.style.border = '2px solid';
