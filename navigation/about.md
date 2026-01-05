@@ -148,7 +148,7 @@ outputElement.innerHTML = '';
 
 // Data array
 const favorites = [
-  {flag: "{{site.baseurl}}/images/alfredo_pasta.jpg", greeting: "Alfredo Pasta", description: "Favorite Food"},
+  {img: "{{site.baseurl}}/images/alfredo_pasta.jpg", greeting: "Alfredo Pasta", description: "Favorite Food"},
 ];
 
 // Create a div container with id
