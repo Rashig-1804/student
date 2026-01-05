@@ -130,3 +130,8 @@ Gallery of Pics, scroll to the right for more ...
 - Favorite Ice Cream Flavor: Cookies and Cream
 - Favorite Food: Alfredo Pasta 
 - Favorite Color: Navy blue
+
+<div class="favorite_things">
+  <img src="{{site.baseurl}}/images/alfredo_pasta.jpg">
+  <img src="{{site.baseurl}}/images/cookies_cream.jpg" alt="Image 1">
+</div>
