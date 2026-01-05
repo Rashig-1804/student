@@ -135,3 +135,73 @@ Gallery of Pics, scroll to the right for more ...
   <img src="{{site.baseurl}}/images/alfredo_pasta.jpg" style="width: 30%;">
   <img src="{{site.baseurl}}/images/cookies_cream.jpg" style="width: 30%;">
 </div>
+
+
+
+### Fun Facts
+<div id="grid_container"></div>
+
+<script>
+var outputElement = document.getElementById("grid_container");
+// Clear the output
+outputElement.innerHTML = '';
+
+// Data array
+const favorites = [
+  {flag: "{{site.baseurl}}/images/alfredo_pasta.jpg", greeting: "Alfredo Pasta", description: "Favorite Food"},
+];
+
+// Create a div container with id
+const container = document.createElement('div');
+container.id = 'grid_container';
+
+// Style the container 
+container.style.border = '2px solid';
+container.style.padding = '10px';
+
+// Grid specific styles
+container.style.display = 'grid';
+container.style.gridTemplateColumns = 'repeat(auto-fill, minmax(150px, 1fr))';
+container.style.gap = '10px';
+
+// Loop through data and create grid items
+for (const location of favorites) {
+  // Create grid item
+  const gridItem = document.createElement('div');
+  gridItem.style.textAlign = 'center';
+  
+  // Create a flag image
+  const img = document.createElement('img');
+  img.src = location.flag;
+  img.alt = location.description + ' Flag';
+  img.style.width = '100%';
+  img.style.height = '100px';
+  img.style.objectFit = 'contain';
+  
+  // Create a description
+  const description = document.createElement('p');
+  description.textContent = location.description;
+  description.style.margin = '5px 0';
+  description.style.fontWeight = 'bold';
+  
+  // Create a greeting
+  const greeting = document.createElement('p');
+  greeting.textContent = location.greeting;
+  greeting.style.margin = '5px 0';
+  greeting.style.fontStyle = 'italic';
+  greeting.style.opacity = '0.7';
+  
+  // Add all elements to grid item
+  gridItem.appendChild(img);
+  gridItem.appendChild(description);
+  gridItem.appendChild(greeting);
+  
+  // Add grid item to container
+  container.appendChild(gridItem);
+}
+
+// Add containter to output 
+outputElement.appendChild(container);
+
+</script>
+
