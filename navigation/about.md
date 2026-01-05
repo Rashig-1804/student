@@ -148,7 +148,8 @@ outputElement.innerHTML = '';
 
 // Data array
 const favorites = [
-  {img: "{{site.baseurl}}/images/alfredo_pasta.jpg", greeting: "Alfredo Pasta", description: "Favorite Food"},
+  {img: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Shrimp_Fettucini_Alfredo.jpg/960px-Shrimp_Fettucini_Alfredo.jpg?20070104033210", greeting: "Alfredo Pasta", description: "Favorite Food"},
+  {img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/HK_food_Appolo_%E9%9B%AA%E7%B3%95_ice_cream_with_black_cookies_n_white_cream_May_2021_SS2_01.jpg/500px-HK_food_Appolo_%E9%9B%AA%E7%B3%95_ice_cream_with_black_cookies_n_white_cream_May_2021_SS2_01.jpg?20210512160940", greeting: "Cookies and Cream", description: "Favorite Ice Cream Flavor"},
 ];
 
 // Create a div container with id
@@ -202,6 +203,5 @@ for (const location of favorites) {
 
 // Add containter to output 
 outputElement.appendChild(container);
-
 </script>
 
