@@ -125,3 +125,8 @@ Gallery of Pics, scroll to the right for more ...
   <img src="{{site.baseurl}}/images/about/mom.jpg" alt="Image 4">
 </div>
 
+### Fun Facts!
+- Hobbies: Playing the piano and learning Odissi Dance
+- Favorite Ice Cream Flavor: Cookies and Cream
+- Favorite Food: Alfredo Pasta 
+- Favorite Color: Navy blue
