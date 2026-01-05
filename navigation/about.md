@@ -132,6 +132,6 @@ Gallery of Pics, scroll to the right for more ...
 - Favorite Color: Navy blue
 
 <div class="favorite_things">
-  <img src="{{site.baseurl}}/images/alfredo_pasta.jpg">
-  <img src="{{site.baseurl}}/images/cookies_cream.jpg" alt="Image 1">
+  <img src="{{site.baseurl}}/images/alfredo_pasta.jpg" style="width: 30%;">
+  <img src="{{site.baseurl}}/images/cookies_cream.jpg" style="width: 30%;">
 </div>
