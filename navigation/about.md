@@ -125,13 +125,75 @@ Gallery of Pics, scroll to the right for more ...
   <img src="{{site.baseurl}}/images/about/mom.jpg" alt="Image 4">
 </div>
 
-### Fun Facts!
-- Hobbies: Playing the piano and learning Odissi Dance
-- Favorite Ice Cream Flavor: Cookies and Cream
-- Favorite Food: Alfredo Pasta 
-- Favorite Color: Navy blue
 
-<div class="favorite_things">
-  <img src="{{site.baseurl}}/images/alfredo_pasta.jpg" style="width: 30%;">
-  <img src="{{site.baseurl}}/images/cookies_cream.jpg" style="width: 30%;">
-</div>
+
+
+
+### Fun Facts!
+<div id="fun_facts"></div>
+
+<script>
+var outputElement = document.getElementById("fun_facts");
+
+// Clear the output
+outputElement.innerHTML = '';
+
+// Data array
+const fun_facts_pic = [
+  {flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/HK_food_Appolo_%E9%9B%AA%E7%B3%95_ice_cream_with_black_cookies_n_white_cream_May_2021_SS2_01.jpg/500px-HK_food_Appolo_%E9%9B%AA%E7%B3%95_ice_cream_with_black_cookies_n_white_cream_May_2021_SS2_01.jpg?20210512160940", greeting: "Favorite Ice Cream", description: "Cookies and Cream"},
+  {flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Shrimp_Fettucini_Alfredo.jpg/640px-Shrimp_Fettucini_Alfredo.jpg", greeting: "Favorite Food", description: "Alfredo Pasta"},
+  {flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/000080_Navy_Blue_Square.svg/640px-000080_Navy_Blue_Square.svg.png", greeting: "Favorite Color", description: "Navy Blue"},
+  {flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Steinway_%26_Sons_concert_grand_piano%2C_model_D-274%2C_manufactured_at_Steinway%27s_factory_in_Hamburg%2C_Germany.png/640px-Steinway_%26_Sons_concert_grand_piano%2C_model_D-274%2C_manufactured_at_Steinway%27s_factory_in_Hamburg%2C_Germany.png", greeting: "Hobby", description: "Playing the piano"},
+];
+
+// Create a div container with id
+const funFactsContainer = document.createElement('div');
+funFactsContainer.id = 'fun_facts';
+
+// Style the container 
+funFactsContainer.style.border = '2px solid';
+funFactsContainer.style.padding = '10px';
+
+// Grid specific styles
+funFactsContainer.style.display = 'grid';
+funFactsContainer.style.gridTemplateColumns = 'repeat(auto-fill, minmax(150px, 1fr))';
+funFactsContainer.style.gap = '10px';
+
+// Loop through data and create grid items
+for (const location of fun_facts_pic) {
+  // Create grid item
+  const itemgrid = document.createElement('div');
+  itemgrid.style.textAlign = 'center';
+  
+  // Create a flag image
+  const imgs = document.createElement('img');
+  imgs.src = location.flag;
+  imgs.alt = location.description + ' Flag';
+  imgs.style.width = '100%';
+  imgs.style.height = '100px';
+  imgs.style.objectFit = 'contain';
+  
+  // Create a description
+  const description = document.createElement('p');
+  description.textContent = location.description;
+  description.style.margin = '5px 0';
+  description.style.fontWeight = 'bold';
+  
+  // Create a greeting
+  const greeting = document.createElement('p');
+  greeting.textContent = location.greeting;
+  greeting.style.margin = '5px 0';
+  greeting.style.fontStyle = 'italic';
+  greeting.style.opacity = '0.7';
+  
+  // Add all elements to grid item
+  itemgrid.appendChild(imgs);
+  itemgrid.appendChild(description);
+  itemgrid.appendChild(greeting);
+  
+  // Add grid item to container
+  funFactsContainer.appendChild(itemgrid);
+}
+
+// Add containter to output 
+outputElement.appendChild(funFactsContainer);
